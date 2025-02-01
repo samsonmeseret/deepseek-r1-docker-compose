@@ -1,4 +1,4 @@
-# Open-WebUI with Ollama (CPU-only) Docker Deployment
+# DeepSeek-R1 on Ollama using Open-WebUI Docker Deployment
 Deploying Open-WebUI with Ollama using Docker Compose (CPU-only setup) provides a streamlined way to run AI models locally without GPU hardware. This implementation uses a custom entrypoint script to download the deepseek-r1:8b model automatically when a container is launched. Here's an implementation guide:
 
 ## 📋 Prerequisites
@@ -42,8 +42,10 @@ docker compose down --volumes --rmi all
 1. Open browser to `http://localhost:3000`
 2. Create admin account
 3. Start chatting!
-
-![Open-WebUI](https://i.imgur.com/zLog1Gc.png)
+### Thinking
+![Thinking](https://i.imgur.com/zLog1Gc.png)
+### Answer
+![Answer](https://i.imgur.com/nN4GnjT.png)
 
 ---
 
