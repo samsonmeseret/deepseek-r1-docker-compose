@@ -9,7 +9,7 @@ services:
     volumes:
       - "./open-webui:/app/backend/data"
     environment:
-      OLLAMA_BASE_URL: https://ai-api.samanware.com/
+      OLLAMA_BASE_URL:
     networks:
       - dokploy-network
 
