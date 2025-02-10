@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   ollama:
     image: ollama/ollama:latest
@@ -8,7 +10,7 @@ services:
       - ollama:/root/.ollama
       - ./entrypoint.sh:/entrypoint.sh
     restart: unless-stopped
-    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+    entrypoint: ["/bin/bash", "/entrypoint.sh"]
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -18,8 +20,10 @@ services:
     volumes:
       - open-webui:/app/backend/data
     environment:
-      - OLLAMA_BASE_URL=https://ai-api.samanware.com
+      - OLLAMA_BASE_URL=http://ollama:11434
     restart: unless-stopped
+    depends_on:
+      - ollama
 
 volumes:
   ollama:
