@@ -30,4 +30,4 @@ EXPOSE 11434
 # CMD ["ollama", "serve"]
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-CMD ["/entrypoint.sh"]
+CMD ["bash", "/entrypoint.sh"]
